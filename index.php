@@ -31,8 +31,8 @@
 
     <h3>Menu :</h3>
     <ul>
-      <li><a href="soal1.html">Soal 1</a></li>
-      <li><a href="soal2.html">Soal 2</a></li>
+      <li><a href="soal1.php">Soal 1</a></li>
+      <li><a href="soal2.php">Soal 2</a></li>
     </ul>
   </body>
 </html>

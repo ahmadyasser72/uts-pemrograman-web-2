@@ -5,75 +5,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>Hasil Perhitungan</title>
+  <title>Perhitungan Nilai</title>
 </head>
 
 <body>
   <h1>Perhitungan Nilai</h1>
 
-  <a href="soal2.html"> &lt;&lt; Kembali </a>
+  <a href="index.php"> &lt;&lt; Kembali </a>
 
   <br /><br />
 
-  <?php
-  if (isset($_POST['hitung_harga'])) {
-    $nama_barang = $_POST['nama_barang'];
-    $harga = $_POST['harga'];
-    $jumlah_beli = $_POST['jumlah_beli'];
-
-    ?>
+  <form action="soal2-hitung.php" method="post">
     <table border="1">
       <tr>
-        <td colspan="2">
-          <ul>
-            <li>Nama Barang : <?php echo $nama_barang ?> </li>
-            <li>Harga Barang : <?php echo $harga ?> </li>
-            <li>Jumlah Barang : <?php echo $jumlah_beli ?> </li>
-            <li>Sub Total :
-              <?php
-              $sub_total = $harga * $jumlah_beli;
-              echo $sub_total;
-              ?>
-            </li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td width="60%">Diskon</td>
+        <td width="40%"><label for="nama_barang">Nama Barang</label></td>
         <td>
-          <?php
-          if ($sub_total > 2_000_000) {
-            $diskon = $sub_total * 0.12;
-          } else if ($sub_total > 1_000_000) {
-            $diskon = $sub_total * 0.08;
-          } else {
-            $diskon = 0;
-          }
-
-          echo $diskon;
-          ?>
+          <input type="text" name="nama_barang" id="nama_barang" placeholder="masukan nama barang..." required />
         </td>
       </tr>
       <tr>
-        <td>Harga Total</td>
+        <td><label for="harga">Harga</label></td>
         <td>
-          <?php
-          $total_harga = $sub_total - $diskon;
-          echo $total_harga;
-          ?>
+          <input type="number" name="harga" id="harga" placeholder="0" required />
         </td>
       </tr>
       <tr>
-        <td colspan="2">
-          <h3>Keterangan Diskon</h3>
-          <ul>
-            <li>Pembelian lebih dari 100000 Mendapatkan diskon 8%</li>
-            <li>Pembelian lebih dari 200000 Mendapatkan diskon 12%</li>
-          </ul>
+        <td><label for="jumlah_beli">Jumlah Beli</label></td>
+        <td>
+          <input type="number" name="jumlah_beli" id="jumlah_beli" placeholder="0" required />
+        </td>
+      </tr>
+      <tr>
+        <td align="right" colspan="2">
+          <input type="submit" value="Hitung" name="hitung_harga" />
+          <input type="reset" value="Reset" />
         </td>
       </tr>
     </table>
-    <?php
-  }
-  ?>
+  </form>
 </body>
+
+</html>
