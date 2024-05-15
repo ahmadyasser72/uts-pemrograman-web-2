@@ -26,9 +26,9 @@
       <tr>
         <td colspan="2">
           <ul>
-            <li>Nama Barang : <?php echo $nama_barang ?> </li>
-            <li>Harga Barang : <?php echo $harga ?> </li>
-            <li>Jumlah Barang : <?php echo $jumlah_beli ?> </li>
+            <li>Nama Barang : <?= $nama_barang ?> </li>
+            <li>Harga Barang : <?= $harga ?> </li>
+            <li>Jumlah Barang : <?= $jumlah_beli ?> </li>
             <li>Sub Total :
               <?php
               $sub_total = $harga * $jumlah_beli;

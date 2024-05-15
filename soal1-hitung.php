@@ -29,23 +29,23 @@
       <tr>
         <td width="40%">NIM</td>
         <td>
-          <?php echo $nim ?>
+          <?= $nim ?>
         </td>
       </tr>
       <tr>
         <td>Nama Lengkap</td>
         <td>
-          <?php echo $nama ?>
+          <?= $nama ?>
         </td>
       </tr>
       <tr>
         <td>Nilai</td>
         <td>
           <ul>
-            <li> Absen : <?php echo $nilai_absen ?> </li>
-            <li> Tugas : <?php echo $nilai_tugas ?> </li>
-            <li> UTS : <?php echo $nilai_uts ?> </li>
-            <li> UAS : <?php echo $nilai_uas ?> </li>
+            <li> Absen : <?= $nilai_absen ?> </li>
+            <li> Tugas : <?= $nilai_tugas ?> </li>
+            <li> UTS : <?= $nilai_uts ?> </li>
+            <li> UAS : <?= $nilai_uas ?> </li>
           </ul>
         </td>
       </tr>
